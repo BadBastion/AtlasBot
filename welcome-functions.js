@@ -11,6 +11,7 @@ module.exports.init = function(bot){
 
 module.exports['help'] = function(user, target, log){
     atlasbot.sendMessage(target, Message.welcome.help(user));
+    atlasbot.sendMessage(target, Message.pm.welcome(user));
     Log.server('!help was requested in '+target.name, user, log);
 };
 module.exports['support'] = function(user, target, log, perms){
