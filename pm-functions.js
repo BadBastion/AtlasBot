@@ -1,14 +1,14 @@
 var Discord = require("discord.js");
-var Messages = require("./messages.js");
+var Message = require("./messages.js");
 var Log = require("./lib/log-interface.js");
 var Forum = require("./lib/forum-interface.js");
 var Users = require("./lib/users-interface.js");
 var Server = require("./lib/server-interface.js");
 
 
-var Atlasbot;
+var atlasbot;
 module.exports.init = function(bot){
-    Atlasbot = bot;
+    atlasbot = bot;
     module.exports.init = undefined;
 };
 
@@ -30,12 +30,12 @@ module.exports.init = function(bot){
 //callit();
 
 module.exports['me'] = function(user, target, perms){
-    Atlasbot.sendMessage(target,  Messages.pm.me(user));
+    atlasbot.sendMessage(target,  Message.pm.me(user));
     Log.global('!me was requested by PM', user);
 };
 
 module.exports['setup'] = function(user, target, perms){
-    Atlasbot.sendMessage(target, Messages.pm.welcome(user));
+    atlasbot.sendMessage(target, Message.pm.welcome(user));
     Log.global('!help was requested by PM', user);
 };
 
@@ -55,7 +55,7 @@ module.exports['link'] = function(user, target, perms){
             if(error > 0) {
                 response = ' !link failed due to `[' + response + ']`';
             }
-            Atlasbot.sendMessage(user, response);
+            atlasbot.sendMessage(user, response);
             if(error === 0){
                 Users.addUserGroup(userData, ['Verified']);
             }
@@ -63,7 +63,7 @@ module.exports['link'] = function(user, target, perms){
         })
     }else{
         var response = ' !link failed due to `[ERROR :: user not found]`';
-        Atlasbot.sendMessage(user, response+' try using !add first');
+        atlasbot.sendMessage(user, response+' try using !add first');
         Log.global(response, user);
     }
 };
@@ -76,17 +76,17 @@ module.exports['unlink'] = function(user, target, perms){
         Users.removeUserGroup(userData, ['Verified']);
         Users.push();
         response = ' !unlink `[SUCCESS :: user unlinked]`';
-        Atlasbot.sendMessage(user, response);
+        atlasbot.sendMessage(user, response);
         Log.global(response, user);
     }else{
         response = ' !unlink failed due to `[ERROR :: user not found]`';
-        Atlasbot.sendMessage(user, response+' try using !add first');
+        atlasbot.sendMessage(user, response+' try using !add first');
         Log.global(response, user);
     }
 };
 
 
 module.exports['not-found'] = function(message, funcName, logs){
-    Atlasbot.reply(message, 'The function !'+funcName+' was not found. Try using !help for a list of valid functions');
+    atlasbot.reply(message, 'The function !'+funcName+' was not found. Try using !help for a list of valid functions');
     Log.global('unknown function' + funcName + 'was requested by PM', message.author, logs);
 };
