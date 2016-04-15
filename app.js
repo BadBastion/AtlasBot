@@ -91,7 +91,9 @@ Atlasbot.on("serverNewMember", function(server, user){
 
         }
     }
+
     StaffFunc.syncUser(user,target,log, user.id);
+    PmFunc.add(user);
     PmFunc.setup(user,user,log);
     WelcomeFunc.help(user,target,log);
 });
