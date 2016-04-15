@@ -29,6 +29,12 @@ module.exports.init = function(bot){
 //}
 //callit();
 
+module.exports['help'] = function(user, target, perms){
+    atlasbot.sendMessage(target,  Message.pm.help(user));
+    Log.global('!help was requested by PM', user);
+};
+
+
 module.exports['me'] = function(user, target, perms){
     atlasbot.sendMessage(target,  Message.pm.me(user));
     Log.global('!me was requested by PM', user);
@@ -88,5 +94,5 @@ module.exports['unlink'] = function(user, target, perms){
 
 module.exports['not-found'] = function(message, funcName, logs){
     atlasbot.reply(message, 'The function !'+funcName+' was not found. Try using !help for a list of valid functions');
-    Log.global('unknown function' + funcName + 'was requested by PM', message.author, logs);
+    Log.global('unknown function !' + funcName + ' was requested by PM', message.author, logs);
 };
