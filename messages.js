@@ -12,10 +12,10 @@ pm.help = function(user){
             "• `!me` returns your discord profile information \n" +
            "• `!link {url}` links your discord account to your forum account (type !welcome for more info)\n" +
            "• `!support` **<disabled at the moment>** Alerts the mods that you need help with something\n\n" +
-           "PLEASE NOTE :: Other functions will be avalable\n" +
            "__**WELCOME CHANNEL FUNCTIONS**__\n\n" +
            "• `!help` returns the welcome message (new to the server) \n" +
            "• `!support` **<disabled at the moment>** Alerts the mods that you need help with something\n"
+
 };
 
 
