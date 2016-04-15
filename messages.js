@@ -6,7 +6,7 @@ var pm = {};
 
 
 pm.help = function(user){
-    return "__**PM CHANNEL FUNCTIONS**__" +
+    return "__**PM CHANNEL FUNCTIONS**__\n" +
            "• `!setup` returns instructions on account setup \n" +
             "• `!add` adds you do the list of server users. This _should_ happen when you join the server automatically\n" +
             "• `!me` returns your discord profile information \n" +
@@ -21,7 +21,7 @@ pm.help = function(user){
 
 
 pm.welcome = function(user){
-    return"Welcome to the Atlas Discord Server. You must link your Discord account with your Atlas forum account before you can join the other channels on the server.\n\n"+
+    return"__**Welcome to the Atlas Discord Server.**__\nYou must link your Discord account with your Atlas forum account before you can join the other channels on the server.\n\n"+
         "To link your Atlas account, please post (exactly) the following message on your Atlas forum profile: \n\n"+
         "``` Discord User ID :: "+ user.id +" ``` \n" +
         "(On the Atlas forums, click on your username in the top right and then post in the 'Activity' section.)\n\n\n" +
