@@ -124,4 +124,4 @@ function reset(){
     Atlasbot.logout(resetCallback)
 }
 
-setInterval(reset, 60000);
+setInterval(reset, 3600000);
