@@ -104,3 +104,21 @@ Atlasbot.login("dmaydrum@gmail.com", "AlderSeedbotGroveTenderBramblethornGoliath
         console.log("ATLAS BOT LOGIN")
     }
 });
+
+
+var resetCallback = (function(Atlasbot){
+    return function resetCallback(){
+        Atlasbot.login("dmaydrum@gmail.com", "AlderSeedbotGroveTenderBramblethornGoliath", function(error, token){
+            if(error !== null){
+                console.log("ERROR login (RESET) :: " + error )
+            }else{
+                console.log("ATLAS BOT LOGIN (RESET)")
+            }
+        });
+    }
+})(Atlasbot);
+function reset(){
+    Atlasbot.logout(resetCallback)
+}
+
+setInterval(reset, 3600000);
