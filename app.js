@@ -15,17 +15,20 @@ var Log = require("./lib/log-interface.js");
 var Atlasbot = new Discord.Client();
 
 var serverHooks = [];
-
+var ready = false;
 
 
 //Setup Hooks
 Atlasbot.on('ready', function(){
-    Log.init(Atlasbot);
-    WelcomeFunc.init(Atlasbot);
-    StaffFunc.init(Atlasbot);
-    PmFunc.init(Atlasbot);
-    Server.init(Atlasbot);
-    serverHooks = Server.hooks;
+    if(!ready){
+        Log.init(Atlasbot);
+        WelcomeFunc.init(Atlasbot);
+        StaffFunc.init(Atlasbot);
+        PmFunc.init(Atlasbot);
+        Server.init(Atlasbot);
+        serverHooks = Server.hooks;
+        ready=true;
+    }
   });
 
 
