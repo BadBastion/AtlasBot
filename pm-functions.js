@@ -9,7 +9,6 @@ var Server = require("./lib/server-interface.js");
 var atlasbot;
 module.exports.init = function(bot){
     atlasbot = bot;
-    module.exports.init = undefined;
 };
 
 //function callit(){

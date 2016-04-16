@@ -6,7 +6,6 @@ var server = require("./lib/server-interface.js");
 var atlasbot;
 module.exports.init = function(bot){
     atlasbot = bot;
-    module.exports.init = undefined;
 };
 
 module.exports['help'] = function(user, target, log){

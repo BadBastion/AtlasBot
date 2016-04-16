@@ -7,7 +7,6 @@ var Users = require("./lib/users-interface.js");
 var Atlasbot;
 module.exports.init = function(bot){
     Atlasbot = bot;
-    module.exports.init = undefined;
 };
 module.exports['pullServerUserData'] = function(){
   Users.pullServerUserData();
