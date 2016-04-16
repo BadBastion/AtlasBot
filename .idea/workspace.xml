@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8397864">
-              <caret line="123" column="11" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="11" />
+              <caret line="123" column="24" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pm-functions.js" />
         <option value="$PROJECT_DIR$/messages.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/users-interface.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -734,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8397864">
-          <caret line="123" column="11" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="11" />
+          <caret line="123" column="24" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="24" />
           <folding />
         </state>
       </provider>
